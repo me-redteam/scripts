@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#Extracts the public key from an SSL certificate in PEM format provided as an argument
+#and generates a SHA256 digest of it and ultimately base64 encodes it
+
+#This is useful in android public key pinning or pinning bypass
+
 if [ $# -lt 1 ]; then
     echo "Usage: ./gensha256b64publickey.sh cert.cer (PEM format)"
 else
